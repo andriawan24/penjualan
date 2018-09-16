@@ -27,13 +27,14 @@
 		<td class="text-center"><?= $val['alamat'] ?></td>
 		<td class="text-center"><?= $val['no_tlp'] ?></td>
 		<td class="text-center">
-			<a class="btn btn-success" href="detail.php?kode_cus=<?php echo $val['kode_cus']; ?>"><i class="fa fa-info"></i> Detail</a> 
-			<a class="btn btn-primary" href="update.php?kode_cus=<?php echo $val['kode_cus']?>"><i class="fa fa-cut"></i> Edit</a>
-			<a href="hapus.php?kode_cus=<?php echo $val['kode_cus']; ?>" class="btn btn-danger"><i class="fa fa-trash"></i> Hapus</a>
+			<a class="btn btn-success" href="detail.php?kode_cus=<?= $val['kode_cus']; ?>"><i class="fa fa-info"></i> Detail</a> 
+			<a class="btn btn-primary" href="update.php?kode_cus=<?= $val['kode_cus']?>"><i class="fa fa-cut"></i> Edit</a>
+			<a href="hapus.php?kode_cus=<?= $val['kode_cus']; ?>" class="btn btn-danger"><i class="fa fa-trash"></i> Hapus</a>
 		</td>
 	</tr>
 	<?php endforeach;?>
 	</table>
-		
+<a href="../logout.php">Log Out</a>		
 </div>
+
 <?php require_once 'footer.php'; ?>

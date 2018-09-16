@@ -18,7 +18,7 @@
 	<input type="text" name="nama_sup" placeholder="Nama Supplier" class="form-control">
 	<div>&nbsp;</div>
 	<strong>Kontak Perusahaan</strong>
-	<input type="text" name="kontak" placeholder="Kontak Perusahaan" class="form-control"><br>
-
+	<input type="text" name="kontak" placeholder="Kontak Perusahaan" class="form-control">
+	<div>&nbsp;</div>
 	<button type="submit" name="submit" class="btn btn-success" style="padding:5px 30px;font-size:17px"><i class="fa fa-plus"> Tambah</i></button>
 </form>

@@ -34,7 +34,7 @@ class Pembeli extends Koneksi
 	}
 	public function ubahDataPembeli($nama_cus, $alamat, $no_tlp, $kode_cus){
 		$db = $this->getKoneksi();
-		$query = $db->prepare("UPDATE pembeli SET nama_cus = '$nama_cus', alamat = '$alamat', no_tlp = '$no_tlp'");
+		$query = $db->prepare("UPDATE pembeli SET nama_cus = '$nama_cus', alamat = '$alamat', no_tlp = '$no_tlp' WHERE kode_cus = '$kode_cus'");
 		return $query->execute();
 	}	
 }

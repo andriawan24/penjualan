@@ -2,9 +2,15 @@
 <html>
 <head>
 	<title>Supplier</title>
-	<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../assets/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../style/assets/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../style/assets/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<?php 
+	session_start();
+	if(empty($_SESSION['username']) && empty($_SESSION['password'])){
+	header("Location: ../index.php");
+	} 
+	?>
 </head>
 <body>
 <div class="container">

@@ -10,7 +10,7 @@
 		</div>
 		<div>&nbsp;</div>
 		<div>
-			<strong>Nama Barang</strong>
+			<strong>Harga Barang</strong>
 			<input type="number" name="harga" placeholder="Harga Barang" class="form-control">
 		</div>
 		<div>&nbsp;</div>

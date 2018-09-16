@@ -1,6 +1,6 @@
 <?php
 /**
- *
+ * Membuat Koneksi ke Database
  */
 class Koneksi
 {

@@ -11,6 +11,11 @@
 <div>&nbsp;</div>
 <table 	class="table table-striped">
 	<tr>
+		<th>Kode Supplier</th>
+		<td> : </td>
+		<td><?= $detail['kode_sup'] ?></td>
+	</tr>
+	<tr>
 		<th width="19%">Nama Supplier</th>
 		<td width="1%"> : </td>
 		<td><?= $detail['nama_sup']; ?></td>

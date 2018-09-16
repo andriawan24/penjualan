@@ -21,7 +21,7 @@ class User extends Koneksi
 			//jika jumlah baris > 0
 			if($query->rowCount() > 0){
 				//jika password yang dimasukkan sesuai dengan yang ada di database
-				if($data['password'] == $this->password){
+				if(password_verify($this->password, $data['password'])){
 					session_start();
 					//simpan informasi user login
 					$_SESSION['username'] = $data['username'];

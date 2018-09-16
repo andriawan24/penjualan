@@ -11,14 +11,14 @@
 			$nama_cus = $_POST['nama_cus'];
 			$alamat = $_POST['alamat'];
 			$no_tlp = $_POST['no_tlp'];
-
+				
 			$ubah->ubahDataPembeli($nama_cus, $alamat, $no_tlp, $kode_cus);
 			header("Location: index.php");
 		}
 	 ?>
 	<h2>Ubah Data Pembeli</h2>
 	<div>&nbsp;</div>
-	<form action="update.php" method="post" class="form-group">
+	<form action="update.php?kode_cus=<?= $cariSatu['kode_cus'] ?>" method="post" class="form-group">
 		<input type="text" name="nama_cus" placeholder="Nama Customer" value="<?= $cariSatu['nama_cus'];?>" class="form-control">
 		<div>&nbsp;</div>
 		<input type="text" name="alamat" class="form-control" value="<?= $cariSatu['alamat']; ?>">

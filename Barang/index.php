@@ -2,10 +2,6 @@
 require_once 'header.php';
 require_once 'barang.php';
 $barang = new Barang();
-session_start();
-if(empty($_SESSION['username']) && empty($_SESSION['password'])){
-	header("Location: ../index.php");	
-}
 ?>
 	<div style="margin-top:10px;">
 	<h2>Daftar Barang</h2><br>
@@ -27,14 +23,14 @@ if(empty($_SESSION['username']) && empty($_SESSION['password'])){
 		foreach ($barang->findAllBarang() as $data) : ?>
 		<tr>
 			<td align="center"><?php echo $i++; ?></td>
-			<td class="text-center"><?php echo $data['nama_barang']; ?></td>
+			<td class="text-center"><?php echo $data[1]; ?></td>
 			<td class="text-center"><?php echo $data['harga'] ?></td>
 			<td class="text-center"><?php echo $data['stok'] ?></td>
 			<td></td>
 			<td class="text-center">
 				<a class="btn btn-success" href="detail.php?kode_barang=<?php echo $data['kode_barang']; ?>"><i class="fa fa-info"></i> Detail</a> 
-				<a class="btn btn-primary" href="update.php?kode_cus=<?php echo $val['kode_cus']?>"><i class="fa fa-cut"></i> Edit</a>
-				<a href="hapus.php?kode_cus=<?php echo $val['kode_cus']; ?>" class="btn btn-danger"><i class="fa fa-trash"></i> Hapus</a>
+				<a class="btn btn-primary" href="update.php?kode_barang=<?= $data['kode_barang']?>"><i class="fa fa-cut"></i> Edit</a>
+				<a href="hapus.php?kode_barang=<?php echo $data['kode_barang']; ?>" class="btn btn-danger"><i class="fa fa-trash"></i> Hapus</a>
 			</td>	
 		</tr>
 	<?php endforeach;?>
