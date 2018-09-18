@@ -39,4 +39,10 @@ class User extends Koneksi
 			return false;
 		}
 	}
+	public function Register($username, $password)
+	{
+		$db = $this->getKoneksi();
+		$query = $db->prepare("INSERT INTO user (id, username, password) VALUES ('', '$username', '$password')");
+		return $query->execute();
+	}
 }

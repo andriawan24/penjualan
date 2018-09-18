@@ -30,7 +30,8 @@
 </head>
 <body>
 	<div class="tengah">
-		<form class="form-group" action="index.php" method="post" onsubmit="submit()">
+		<h3><a href="register.php">Daftar</a></h3>
+		<form class="form-group" action="index.php" method="post">
 			<h4  style="color:#343a40"><strong>Username : </strong></h4>
 			<input type="text" name="username" placeholder="username" class="form-control" required autofocus >
 			<div>&nbsp;</div>

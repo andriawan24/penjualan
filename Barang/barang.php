@@ -3,7 +3,7 @@
 require_once 'koneksi.php';
 
 /**
- * 
+ * Membuat Perintah-perintah yang bisa di jalankan di database
  */
 class Barang extends Koneksi
 {
